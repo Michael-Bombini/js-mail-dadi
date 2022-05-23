@@ -42,5 +42,7 @@ btn.addEventListener("click" , function(){
  }
 
 
+ trovato = false;
+
 })
 
