@@ -14,13 +14,13 @@ const estrattiComputer = [];
 const estrattiGiocatore = [];
 let totaleComputer = 0 ;
 let totaleGiocatore = 0 ;
+let generatoComputer = 0 ;
+let generatoGiocatore = 0 ;
 
 
 //ascolto l'evento click su genera e genero due numeri rispettivi
 genera.addEventListener("click" , function(){
 
-let generatoComputer = 0 ;
-let generatoGiocatore = 0 ;
 
 //genero due numeri casuali tra 1 e 6 uno per il computer e uno per l'utente
 generatoComputer = (Math.floor(Math.random() * 6 ) + 1 );
