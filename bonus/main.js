@@ -16,5 +16,25 @@ Super Extra Bonus: chiedere all’utente anche quanti elementi vanno estratti da
 
 */
 
-const quantiNumeri = parseInt(prompt("inserisci quanti numeri");
-console.log(quantiNumeri)
+const quantiNumeri = parseInt(prompt("inserisci quanti numeri minimo 5"));
+const quantiFondo = parseInt(prompt("quanti elementi vuoi estrarre dal fondo?"));
+const array = [];
+
+for(let i = 0 ; i < quantiNumeri ; i++){
+    array.push(Math.floor(Math.random() * 6 ) + 1 );
+}
+
+
+
+
+
+
+if(array.length < 5  || isNaN(quantiFondo) || quantiFondo > quantiNumeri )
+    console.log(-1);
+    else
+for(let i = array.length - quantiFondo ; i < array.length ; i++){
+    console.log(`il numero nella posizione ${i+1}  è ${array[i]} `);
+}
+
+
+
