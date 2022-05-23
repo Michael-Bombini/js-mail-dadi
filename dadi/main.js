@@ -5,9 +5,9 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 */
 
 //recupero elementi dal DOM
-const genera = document.querySelector(".genera");
-const controlla = document.querySelector(".controlla");
-const container = document.querySelector(".container");
+const genera = document.getElementById("genera");
+const controlla = document.getElementById("controlla");
+const container = document.getElementById("container");
 
 //dichiarazione array e rispettivo totale su cui sarà calcolata la media
 const estrattiComputer = [];
@@ -30,9 +30,8 @@ generatoGiocatore = (Math.floor(Math.random() * 6 ) + 1 );
 estrattiComputer.push(generatoComputer);
 estrattiGiocatore.push(generatoGiocatore);
 
-container.innerHTML += `<div>Numero generato computer : ${generatoComputer}</div>`;
-container.innerHTML += `<div>Numero generato giocatore : ${generatoGiocatore}</div>`;
 
+console.log("genera click");
 
 });
 
@@ -52,5 +51,7 @@ if(totaleComputer > totaleGiocatore)
     console.log("HA VINTO IL COMPUTER con i seguenti numeri" + totaleComputer);
 else
     console.log("HA VINTO IL GIOCATORE CON I SEGUENTI NUMERI" + totaleGiocatore);
+
+console.log("controlla click");
 
 });
