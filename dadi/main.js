@@ -8,6 +8,10 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 const genera = document.getElementById("genera");
 const controlla = document.getElementById("controlla");
 const container = document.getElementById("container");
+const punteggioComputer = document.getElementById("punteggioComputer");
+const punteggioGiocatore = document.getElementById("punteggioGiocatore");
+const winnerName = document.querySelector(".winnerName");
+const nuovaPartita = document.querySelector(".btn-warning");
 
 //dichiarazione array e rispettivo totale su cui sarà calcolata la media
 const estrattiComputer = [];
@@ -47,11 +51,30 @@ for(let i = 0 ; i < estrattiComputer.length ; i++){
     totaleGiocatore += estrattiGiocatore[i];
 }
 
-if(totaleComputer > totaleGiocatore)
-    console.log("HA VINTO IL COMPUTER con i seguenti numeri" + totaleComputer);
-else
-    console.log("HA VINTO IL GIOCATORE CON I SEGUENTI NUMERI" + totaleGiocatore);
-
+if(totaleComputer > totaleGiocatore){
+    console.log("HA VINTO IL COMPUTER con i seguenti numeri " + totaleComputer);
+    winnerName.innerHTML += `<h2>IL COMPUTER CON</h2> <h3 class="text-center">${totaleComputer} punti </h3>`;
+}
+else if(totaleGiocatore > totaleComputer){
+    console.log("HA VINTO IL GIOCATORE CON I SEGUENTI NUMERI " + totaleGiocatore);
+    winnerName.innerHTML += `<h2>IL GIOCATORE CON</h2> <h3 class="text-center">${totaleGiocatore} punti </h3>`;
+}
+else {
+    winnerName.innerHTML += `<h2>PAREGGIO CON</h2> <h3 class="text-center">${totaleGiocatore} punti </h3>`;
+}
 console.log("controlla click");
+
+punteggioComputer.innerHTML = totaleComputer;
+punteggioGiocatore.innerHTML = totaleGiocatore;
+
+
+
+});
+
+
+nuovaPartita.addEventListener("click" , function(){
+
+document.location.reload();
+
 
 });
