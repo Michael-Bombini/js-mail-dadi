@@ -10,8 +10,11 @@ const container = document.querySelector(".container");
 const emailUtente = document.getElementById("email");
 const btn = document.querySelector(".btn");
 const mailConsentite = ["mario.rossi@gmail.com" , "luigi.verdi@gmail.com" , "gianni.gialli@gmail.com"];
+const mailVerificata = document.querySelector(".mailVerificata");
+
 let valoreMail;
 let trovato = false ;
+
 
 
 btn.addEventListener("click" , function(){
@@ -24,11 +27,18 @@ btn.addEventListener("click" , function(){
     }
  }
 
+ 
+
+ 
  if(trovato){
-     container.innerHTML += ` <h2 class="text-success">Complimenti la tua email può accedere</h2> ` ;
+    console.log("la tua email può accedere");
+    mailVerificata.innerHTML = `<h2 class="text-success">La tua email può accedere</h2>`
+    
  }
+ 
  else {
-     container.innerHTML += ` <h2 class="text-danger">La tua email non può accedee</h2> `;
+    console.log("la tua email non può accedere");
+    mailVerificata.innerHTML = `<h2 class="text-danger">La tua email NON può accedere</h2>`
  }
 
 
