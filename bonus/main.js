@@ -24,8 +24,8 @@ for(let i = 0 ; i < quantiNumeri ; i++){
     array.push(Math.floor(Math.random() * 6 ) + 1 );
 }
 
-
-
+console.log("Ecco i valori dell'array \n ")
+console.log(array)
 
 
 
@@ -37,4 +37,4 @@ for(let i = array.length - quantiFondo ; i < array.length ; i++){
 }
 
 
-
+console.log("\n l'indice della posizione è stato stampato con i+1")
